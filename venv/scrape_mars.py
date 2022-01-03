@@ -10,6 +10,8 @@ def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
 
+    mars = {}
+    
     url = "https://redplanetscience.com/"
     browser.visit(url)
 
