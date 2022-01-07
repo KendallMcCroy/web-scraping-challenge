@@ -10,16 +10,22 @@ def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
   
-    news_title, news_paragraph = mars_news(browser)
+    news_title, news_p = mars_news(browser)
 
-    data = {
-        "news-title": news_title,
-        "news_paragraph": news_paragraph,
-        "featured_image": featured_image(browser),
-        "facts": mars_facts()
-        # "hemispheres": hemispheres(browser), 
-        # "last_modified": dt.datetime.now()
+    mars_dict = {
+        "news_title":news_title,
+        "news_p":news_p,
+        "img_url":img_url,
+        "df":df,
+        "hemisphere_images":hemisphere_image_urls
     }
+        # "news-title": news_title, 
+        # "news_p": news_p,
+        # "featured_image": featured_image(browser),
+        # "facts": mars_facts()
+        # # "hemispheres": hemispheres(browser), 
+        # # "last_modified": dt.datetime.now()
+    
 
     browser.quit()
     return data 
