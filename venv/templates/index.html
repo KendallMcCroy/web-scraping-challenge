@@ -1,3 +1,6 @@
+<!-- href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +11,7 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      
     />
   </head>
   <body>
@@ -25,8 +29,8 @@
           <div class="media">
             <div class="media-body">
               <h2>Latest Mars News</h2>
-              <h4 class="media-heading">{{ mars.news_title }}</h4>
-              <p>{{ mars.news_paragraph }}</p>
+              <h4 class="media-heading">{{mars.news_title}}</h4>
+              <p>{{mars.news_paragraph}}</p>
             </div>
           </div>
         </div>
@@ -34,7 +38,7 @@
 
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
-        <div class="col-md-8">
+        <div class="col-lg-8 col-md-8 col-sm-12">
           <h2>Featured Mars Image</h2>
 
           <!-- if images is False/None/non-existent, then default to error message -->
@@ -49,7 +53,7 @@
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
             <h4>Mars Facts</h4>
-            {{ mars.facts | safe }}
+            {{mars.facts | safe}}
           </div>
         </div>
       </div>
